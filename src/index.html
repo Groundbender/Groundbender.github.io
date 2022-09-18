@@ -6,6 +6,8 @@
     <meta name="keywords"content="сайт визитка">
     <meta name="robots" content="all">
     <meta property="og:title" content="Это моя страница">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <title>Lesson 2_HTML</title>
 </head>
@@ -35,143 +37,194 @@
     </div>
    </div>
    <div class="about_me">
+    <div class="about_me_container">
     <h2>Обо мне</h2>
-    <img src="..." alt="">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cumque sint minus est. Dicta magnam, minus dolorem maiores eveniet iste? <br> Corrupti aspernatur sapiente tenetur molestiae facilis voluptatem nam nobis quidem.</p>
-    <button download> Скачать резюме</button>
-</div>
+    <img class="about_me_img" src="img/Парень mini.png" alt="Иконка парень">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh. <br><br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+    <button download><img src="img/download.svg" alt=""> Скачать резюме </button>
+    </div>
+    </div>
    <div class="skills">
-    <h2>Что я умею</h2>
-    <img src="..." alt="">
-    <div class="skills_item">
-        <img src="" alt="">
-        <h3>Веб-дизайн</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem.</p>
+    <div class="skills_container">
+        <h2>Что я умею</h2> 
         <div class="skills_item">
-            <img src="" alt="">
-            <h3>Разработка</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem.</p> <div class="skills_item">
-                <img src="" alt="">
-                <h3>CEO оптимизация</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem.</p> <div class="skills_item">
-                    <img src="" alt="">
-                    <h3>Маркетинг</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem.</p>
-                </div>
+            <img width="47px" height="47px" src="img/laptop.svg" alt="">
+            <h3>Веб-дизайн</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem.</p>
+        </div>
+            <div class="skills_item">
+                <img width="47px" height="47px" src="img/develop.svg" alt="">
+                <h3>Разработка</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem.</p> 
             </div>
+                <div class="skills_item">
+                    <img width="47px" height="47px"  src="img/rocket.svg" alt="">
+                    <h3>CEO оптимизация</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem.</p> 
+                </div>
+                    <div class="skills_item">
+                        <img width="47px" height="47px" src="img/megaphone.svg" alt="">
+                        <h3>Маркетинг</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem.</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+    </div>
+   
 
         <div class="cases">
-        <h2>Кейсы</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aspernatur obcaecati consequatur officiis, repellendus voluptates quasi provident facilis.</p>
-        </div>
-        <div class="cases_content">
-        <img src="..." alt="">
-        <div class="cases_decription">
-            <h3>CLIENT:</h3>
-            <p>Какая-то компания</p>
-            <h3>WEBSITE:</h3>
-            <P>http://www.somedomain.com</P>
-            <h3>Название проекта</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi doloremque obcaecati doloribus culpa earum iusto adipisci blanditiis cum nisi pariatur ipsam voluptate, quos nesciunt iure eveniet omnis! Exercitationem, iure possimus?</p>
-        </div>
-        </div>
+            <div class="cases_container">
+                <h2>Кейсы</h2>
+                <p class="lorem"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec ornare diamcoccodo nibh ante facilisis.</p>
+                <div class="cases_content">
+                <img width="1169px" height="592" src="img/casesimg.jpg" alt="">
+                </div>
+                <div class="cases_description">
+                    <div class="client"><h3>CLIENT:</h3>
+                        <p>Какая-то компания</p>
+                        <h3>WEBSITE:</h3>
+                        <P>http://www.somedomain.com</P>
+                        <button class="vizit"> <a href=""></a> VIZIT LIVE SITE</button>
+                    </div>
+                    <div class="project_name">
+                        <h3>Название проекта</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi doloremque obcaecati doloribus culpa earum iusto adipisci blanditiis cum nisi pariatur ipsam voluptate, quos nesciunt iure eveniet omnis! Exercitationem, iure possimus?</p>
+                    </div>
+                   
+                 </div>
+            </div>
+       </div>
         <div class="cost">
-            <h2>Расчет стоимости</h2>
-            <div class="site_type">
-                <h3>Тип сайта</h3>
-                <select style="color:gray" onchange="this.style.color='black'">
-                    <option value="" style="display:none"></option>
-                    <option value="1" style="color:black">Выберите пункт...</option>
-                    </select>
-            </div> 
-            <div class="site_type">
-                <h3>Тип сайта</h3>
-                <select style="color:gray" onchange="this.style.color='black'">
-                    <option value="" style="display:none"></option>
-                    <option value="1" style="color:black">Выберите пункт...</option>
-                    </select>
-            </div> 
-            <div class="site_type">
-                <h3>Тип сайта</h3>
-                <select style="color:gray" onchange="this.style.color='black'">
-                    <option value="" style="display:none"></option>
-                    <option value="1" style="color:black">Выберите пункт...</option>
-                    </select>
-            </div> 
-            <hr>
-           <h4> Сроки </h4>
-           <p>0</p>
-           <h4>Стоимость </h4>
-            <p>0</p>
-        </div>
+            <div class="cost_container">
+                <h2>Расчет стоимости</h2>
 
-        <div class="statistics">
-            <h2>НЕМНОГО СТАТИСТИКИ</h2>
-            <img src="..." alt="">
-            <div class="stat_items">
-                <div class="stat_item">
-                    <img src="..." alt="">
+            <div class="site_type">
+                <h3>Тип сайта</h3>
+                <select style="color:gray" onchange="this.style.color='black'">
+                    <option value="1" selected disabled >Выберите пункт</option>
+                    <option value="2" >Сайт-визитка</option>
+                    <option value="3" >Корпоративный сайт</option>
+                    <option value="4" >Интернет-магазин</option>
+                    </select>
+            </div> 
+            <div class="design">
+                <h3>Дизайн</h3>
+                <select style="color:gray" onchange="this.style.color='black'">
+                    <option value="1" selected disabled >Выберите пункт</option>
+                    <option value="2" >Шаблонный</option>
+                    <option value="3" >Уникальный</option>
+                    <option value="4" >MOW-Дизайн</option>
+                    </select>
+            </div> 
+            <div class="adaptivity">
+                <h3>Адаптивность</h3>
+                <select style="color:gray" onchange="this.style.color='black'">
+                    <option value="1" selected disabled >Выберите пункт</option>
+                    <option value="2" >Только ПК</option>
+                    <option value="3" >Только мобильный</option>
+                    <option value="4" >ПК+мобильный</option>
+                    </select>
+            </div> 
+            <hr class="line">
+            <div class="calculator">
+             <div class="days">
+                 <p>Сроки</p>
+                 <p>0</p>
+             </div>
+              <div class="price">
+                 <p>Стоимость</p>
+                 <p>0</p>
+             </div> 
+         </div>
+        </div> 
+    </div> 
+         
+
+        <div class="statistic">
+            <div class="statistic_container">
+                <h2>Немного статистики</h2>
+                <div class="statistic_item">
+                    <img src="img/smile.svg" alt="">
                     <h3>120</h3>
-                    <p>счастливых клиентов</p>
+                    <p>Счастливых клиентов</p>
                 </div>
-                <div class="stat_item">
-                    <img src="..." alt="">
+                <div class="statistic_item">
+                    <img src="img/programming.svg" alt="">
                     <h3>4600</h3>
-                    <p>часов работы</p>
+                    <p>Часов работы</p>
                 </div>
-                <div class="stat_item">
-                    <img src="..." alt="">
+                <div class="statistic_item">
+                    <img src="img/tick.svg" alt="">
                     <h3>340</h3>
-                    <p>проектов завершено</p>
+                    <p>Проектов завершено</p>
                 </div>
-                <div class="stat_item">
-                    <img src="..." alt="">
+                <div class="statistic_item">
+                    <img src="img/kubok.svg" alt="">
                     <h3>23</h3>
-                    <p>наград получено</p>
+                    <p>Наград получено</p>
                 </div>
             </div>
         </div>
         <div class="reviews">
-         <h2>Отзывы</h2>
-         <img src="..." alt="">
-         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur velit architecto labore quam accusamus repudiandae. Soluta quas odio necessitatibus!</p>
-         <p>Михаил, Ген директор ПАО “Газпром”.</p>
+            <div class="reviews_container">
+                <h2>Отзывы</h2>
+                <div class="review">
+                    <img src="img/Mikhail.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cum totam saepe laborum quae tenetur blanditiis laboriosam asperiores repellat quas!</p> <br>
+                    <p> Михаил, Ген. Директор ПАО "Газпром"</p>
+                </div>
+                <div class="check">
+                    <input type="radio" id="1">
+                    <input type="radio" id="1">
+                    <input type="radio" id="1">
+    
+                </div>
+               
+            </div>
         </div>
 
         <div class="contacts">
-            <h2>МОИ КОНТАКТЫ</h2>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, adipisci.</P>
-            <div class="contact_items">
-                <div class="contact_item">
-                    <img src="..." alt="">
-                    <p>Санкт-Петербург
-                        Невский проспект 11</p>
+            <div class="contacts_container">
+                <h2>Мои Контакты</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo </p>
+                <div class="contacts_data">
+                    <div class="contacts_data_item">
+                        <img src="img/locate.svg" alt="">
+                        <p>Санкт-Петербург, Невский проспект 11</p>
+                    </div>
+                    <div class="contacts_data_item">
+                        <img src="img/mail.svg" alt="">
+                        <p>info@mycompany.ru</p>
+                    </div>
+                    <div class="contacts_data_item">
+                        <img src="img/phone.svg" alt="">
+                        <p>+7 999-999-99-99</p>
+                    </div>
                 </div>
-                <div class="contact_item">
-                    <img src="..." alt="">
-                    <p>info@companyname.com</p>
-                </div>
-                <div class="contact_item">
-                    <img src="..." alt="">
-                    <p>+7 999 999-99-99</p>
-                </div>
-                <h3>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
-                <input type="name" placeholder="Имя">
-                <input type="email" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="Отправить">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                </div>
+                <h3>Оставьте мне сообщение</h3>
+                <form action="#">
+                    <div class="contacts_inputs">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <div class="textarea">
+                        <textarea  name="message" id="messageText" cols="30" rows="10"></textarea>
+                    </div>
+                  <div class="submit">
+                    <input type="submit" value="Отправить">
+                  </div>
+                   
+                </form>
             </div>
-            <div class="map">
-                <img src="..." alt="">
+        </div>
+        <div class="map">
+            <img src="img/map.jpg" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer_container">
+                <p>Copyright 2021 Дамир Насыбуллин. Design by Web</p>
             </div>
-
+        </div>
     
   
     
