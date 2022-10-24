@@ -5,6 +5,7 @@ nav {
   width: 100%;
   height: 60px;
   background: #344051;
+  position: fixed;
   
 }
 .logo {
@@ -13,6 +14,9 @@ nav {
   line-height: 60px;
   padding-left:  388px;
   float: left;
+  -webkit-animation: coming 2s ease ;
+  -o-animation: coming 2s ease;
+  animation:  coming 2s ease;
 }
 .menu {
   float: left;
@@ -25,10 +29,35 @@ nav {
   margin-right: 40px;
   font-size:16px;
 text-transform: uppercase;
+-webkit-animation: topshift 0.4s ease forwards ;
+-o-animation: topshift 0.4s ease forwards;
+animation: topshift 0.4s ease forwards;
+opacity: 0;
+cursor: pointer;
+ 
+}
+
+
+.menu li a {
+  transition: all 0.1s;
+  display: inline-block;
+  transform: scale(1);
+}
+
+.menu li a:visited {
+  color:white;
+}
+.menu li a:hover {
+  color: #e88604;
+
+}
+.menu li a:active {
+  transform: scale(1.1);
+
 }
 .main {
  width: 100%;
- height: calc(100% - 60px);
+ height: 100%;
  background: url(../img/boy.png) 90% 100%/auto 85% no-repeat,url(../img/bg.jpg) center/cover no-repeat;
  }
  .title_container {
@@ -36,6 +65,13 @@ text-transform: uppercase;
   margin: 432px 0px 0px 404px;
   color: #2c384a;
   text-align: center;
+  opacity: 0;
+  -webkit-animation: titlemove 1s ease  forwards;
+  -o-animation: titlemove 1s ease forwards;
+  animation:  titlemove 1s ease forwards;
+  -webkit-animation-delay: 2.4s ;
+  -o-animation-delay: 2.4s ;
+  animation-delay: 2.4s;
 }
 .title_container h1 {
   font-size: 60px;
@@ -56,6 +92,63 @@ text-transform: uppercase;
     font-size: 13px;
     padding: 0 16px ;
     margin: 58px 14px;
+    transition: all 0.2s;
+   transform: scale(1);
+  cursor: pointer;
+
+
+}
+.title_container input:hover {
+  background-color: #344051;
+  color: white;
+}
+.title_container input:active {
+  transform: scale(1.1);
+}
+@keyframes coming {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes topshift {
+  from {
+    opacity: 0;
+    margin-top: -80px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+
+  }
+}
+@keyframes titlemove{
+  from {
+    opacity: 0;
+    margin-left: -500px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 404px;
+
+  }
+}
+.menu li:nth-child(2) {
+animation-delay: 0.4s ;
+}
+.menu li:nth-child(3) {
+animation-delay: 0.8s ;
+}
+.menu li:nth-child(4) {
+animation-delay: 1.2s ;
+}
+.menu li:nth-child(5) {
+animation-delay: 1.6s ;
+}
+.menu li:nth-child(6) {
+animation-delay: 2s ;
 }
 .about_me_container  {
   width: 740px;
@@ -89,7 +182,17 @@ text-transform: uppercase;
  border: 1px solid #6F707E;
  border-radius: 5px;
  background-color: #fff;
+ transform: scale(1);
 } 
+.about_me_container button:hover {
+  border-color: #EA7800;
+  box-shadow: 0 0 5px #EA7800;
+
+}
+.about_me_container button:active {
+  border-color:#EA7800;
+  transform: scale(1.1);
+}
 .download_text {
   text-align: center;
 }
@@ -186,6 +289,17 @@ padding-bottom: 8px;
   font-weight: 400;
   font-size:  20px;
   line-height: 21px;
+  transform: scale(1);
+  cursor: pointer;
+
+}
+
+.vizit:hover {
+  color:  #EA7800;
+
+}
+.vizit:active {
+  transform: scale(1.1);
 }
 
 .cost_container {
@@ -213,6 +327,7 @@ padding-bottom: 8px;
   height: 57px;
   margin-bottom: 37px;
   background: #EEEEEE;
+  
   
 }
 .line {
@@ -245,6 +360,7 @@ background: #EEEEEE;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center ;
+  background-attachment: fixed;
   width: 100%;
   height: 499px;
 }
@@ -319,16 +435,22 @@ background: #EEEEEE;
 }
 .contacts_container h2 {
   text-align: center;
-  margin: 0 auto 43px auto;
-  padding-bottom: 20px;
+  margin: 0 auto ;
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
-  border-bottom: 2px solid #EA7800;
   padding-top: 101px;
-  width: 127px;
-  white-space: nowrap;
+  text-transform: uppercase;
+  width: 242px;
 } 
+.contacts_container h2::after {
+  content: "";
+  width: 72px;
+  height: 4px;
+  display:block;
+  margin: 20px auto 43px auto;
+  background-color: #EA7800;
+}
 .contacts_container>p {
   text-align: center;
   margin: 43px auto 36px auto;
@@ -336,8 +458,15 @@ background: #EEEEEE;
 .contacts_data {
   display: flex;
   align-items:center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 37px;
+  padding-right: 72px;
+}
+.contacts_data_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
 }
 .contacts_container h3 {
   text-align: center;
@@ -351,19 +480,37 @@ background: #EEEEEE;
   display: flex;
   align-items:center;
   justify-content: center;
-  gap: 10px;
+  gap: 28px;
   margin-bottom: 14px;
-  flex-shrink: 1;
+  
+}
+.contact_input {
+  width: 352px;
+  height: 34px;
+  flex-shrink: 0;
 }
 .textarea {
-  display: flex;
-  justify-content: center;
-
+ display: block;
+ margin: 0 auto;
+ text-align: center;
+ width: 732px;
+}
+textarea {
+  width: inherit;
 }
  .submit {
+  display: block;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 28px;
+  margin: 28px auto 178px auto;
+  text-align: center;
+  width: 125px;
+  height: 46px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
 
 }
 .map {
